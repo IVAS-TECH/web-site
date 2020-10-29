@@ -101,11 +101,11 @@ const About = () => (
                             <img width="300" height="300" style={{ marginLeft: 120 }} src="https://www.pcbunlimited.com/spree/products/25/product/stainless_steel_smt_stencil.jpg?1526575336" />
                             <p>
                                 Frameless SMT stencils are for
-                                <ul>
-                                    <li>carring in universal or reusable frames;</li>
-                                    <li>hand printing of PCBs.</li>
-                                </ul>
                             </p>
+                            <ul>
+                                <li>carring in universal or reusable frames;</li>
+                                <li>hand printing of PCBs.</li>
+                            </ul>
                         </Panel>
                     </Col>
                 </Row>

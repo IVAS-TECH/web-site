@@ -17,7 +17,7 @@ const Home = () => (
             }}>
                 <img width="600" height="200" src="https://cdn-media.itead.cc/media/wysiwyg/PCB/SMTStencil_banner.jpg" />
                 <p style={{ marginTop: 20 }}>
-                <h3>Ivas Tech</h3> manifactures SMT stencils and produces thin metal elements such as buisness cards.
+                    <b>Ivas Tech</b> manifactures SMT stencils and produces thin metal elements such as buisness cards.
                 </p>
             </Panel>
             <Panel shaded style={{

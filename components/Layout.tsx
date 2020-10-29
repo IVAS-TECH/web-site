@@ -13,7 +13,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
         <Footer style={{ marginTop: 100 }}>
             <span style={{ margin: 20 }}>
                 Ivas Tech
-                </span>
+            </span>
         </Footer>
     </Container>
 );
