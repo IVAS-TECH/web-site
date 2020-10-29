@@ -26,7 +26,7 @@ const Bar: React.FC<{}> = () => {
             <Navbar.Header>
                 <Link href="/">
                     <h3 style={{
-                        paddingTop: 15,
+                        paddingTop: 14,
                         paddingRight: 30,
                         paddingLeft: 15
                     }}>
