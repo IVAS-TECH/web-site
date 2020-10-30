@@ -61,7 +61,7 @@ const Contact = () => (
                                                 Email:
                                             </Col>
                                             <Col xs={16} xsOffset={2}>
-                                                ststencil@ivastech.com
+                                                smtstencil@ivastech.com
                                             </Col>
                                         </Row>
                                     </List.Item>
