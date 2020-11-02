@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "theme": "lessc -js ./styles/theme.less ./styles/rsuite.css"
   },
   "dependencies": {
     "@iconify/icons-mdi": "^1.0.148",

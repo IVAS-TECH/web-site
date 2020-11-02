@@ -12762,11 +12762,11 @@ a.rs-btn {
   color: #575757;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #e5e5ea;
+  border: 2px solid #e5e5ea;
   transition: border-color ease-in-out 0.3s;
   border-radius: 6px;
   /* stylelint-disable */
-  padding: 7px 11px;
+  padding: 6px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 48px\9;
@@ -12805,7 +12805,7 @@ textarea.rs-input {
 }
 .rs-input-xs {
   /* stylelint-disable */
-  padding: 1px 11px;
+  padding: 0px 10px;
   font-size: 14px;
   line-height: 2.28571429;
   height: 36px\9;
@@ -12821,7 +12821,7 @@ textarea.rs-input-xs {
 }
 .rs-input-lg {
   /* stylelint-disable */
-  padding: 9px 11px;
+  padding: 8px 10px;
   font-size: 26px;
   line-height: 1.61538462;
   height: 62px\9;
@@ -12837,7 +12837,7 @@ textarea.rs-input-lg {
 }
 .rs-input-sm {
   /* stylelint-disable */
-  padding: 4px 11px;
+  padding: 3px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 42px\9;
@@ -12954,10 +12954,10 @@ textarea.rs-input-sm {
   background-color: transparent;
   color: #575757;
   position: absolute;
-  left: 1px;
-  top: 1px;
-  height: 46px;
-  padding: 7px 11px;
+  left: 2px;
+  top: 2px;
+  height: 44px;
+  padding: 6px 10px;
   border-radius: 0 6px 6px 0;
 }
 .rs-input-group.rs-input-group-inside .rs-input-group-btn.rs-btn-loading:hover,
@@ -13400,11 +13400,11 @@ textarea.rs-input-sm {
 .rs-input-group.rs-input-group-inside .rs-auto-complete ~ .rs-input-group-btn,
 .rs-input-group.rs-input-group-inside .rs-form-control-wrapper ~ .rs-input-group-btn {
   left: inherit;
-  right: 1px;
+  right: 2px;
 }
 .rs-input-group-lg > .rs-input {
   /* stylelint-disable */
-  padding: 9px 11px;
+  padding: 8px 10px;
   font-size: 26px;
   line-height: 1.61538462;
   height: 62px\9;
@@ -13436,7 +13436,7 @@ textarea.rs-input-group-lg > .rs-input {
 }
 .rs-input-group-md > .rs-input {
   /* stylelint-disable */
-  padding: 7px 11px;
+  padding: 6px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 48px\9;
@@ -13468,7 +13468,7 @@ textarea.rs-input-group-md > .rs-input {
 }
 .rs-input-group-sm > .rs-input {
   /* stylelint-disable */
-  padding: 4px 11px;
+  padding: 3px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 42px\9;
@@ -13500,7 +13500,7 @@ textarea.rs-input-group-sm > .rs-input {
 }
 .rs-input-group-xs > .rs-input {
   /* stylelint-disable */
-  padding: 1px 11px;
+  padding: 0px 10px;
   font-size: 14px;
   line-height: 2.28571429;
   height: 36px\9;
@@ -13528,14 +13528,14 @@ textarea.rs-input-group-xs > .rs-input {
 }
 .rs-input-group.rs-input-group-lg > .rs-input-group-addon {
   /* stylelint-disable */
-  padding: 9px 11px;
+  padding: 8px 10px;
   font-size: 26px;
   line-height: 1.61538462;
   height: 62px\9;
   /* stylelint-enable */
-  width: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 48px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rs-input-group.rs-input-group-lg > .rs-input-group-addon {
@@ -13547,14 +13547,14 @@ textarea.rs-input-group.rs-input-group-lg > .rs-input-group-addon {
 }
 .rs-input-group.rs-input-group-md > .rs-input-group-addon {
   /* stylelint-disable */
-  padding: 7px 11px;
+  padding: 6px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 48px\9;
   /* stylelint-enable */
-  width: 42px;
-  padding-left: 11px;
-  padding-right: 11px;
+  width: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rs-input-group.rs-input-group-md > .rs-input-group-addon {
@@ -13566,14 +13566,14 @@ textarea.rs-input-group.rs-input-group-md > .rs-input-group-addon {
 }
 .rs-input-group.rs-input-group-sm > .rs-input-group-addon {
   /* stylelint-disable */
-  padding: 4px 11px;
+  padding: 3px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 42px\9;
   /* stylelint-enable */
-  width: 38px;
-  padding-left: 9px;
-  padding-right: 9px;
+  width: 36px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rs-input-group.rs-input-group-sm > .rs-input-group-addon {
@@ -13585,14 +13585,14 @@ textarea.rs-input-group.rs-input-group-sm > .rs-input-group-addon {
 }
 .rs-input-group.rs-input-group-xs > .rs-input-group-addon {
   /* stylelint-disable */
-  padding: 1px 11px;
+  padding: 0px 10px;
   font-size: 14px;
   line-height: 2.28571429;
   height: 36px\9;
   /* stylelint-enable */
-  width: 34px;
-  padding-left: 7px;
-  padding-right: 7px;
+  width: 32px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rs-input-group.rs-input-group-xs > .rs-input-group-addon {
@@ -13604,13 +13604,13 @@ textarea.rs-input-group.rs-input-group-xs > .rs-input-group-addon {
 }
 .rs-input-group-inside.rs-input-group-lg > .rs-input-group-btn {
   /* stylelint-disable */
-  padding: 9px 11px;
+  padding: 8px 10px;
   font-size: 26px;
   line-height: 1.61538462;
   height: 62px\9;
   /* stylelint-enable */
-  height: 60px;
-  padding: 9px 15px;
+  height: 58px;
+  padding: 8px 14px;
   border-radius: 0 6px 6px 0;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -13631,8 +13631,8 @@ textarea.rs-input-group-inside.rs-input-group-lg > .rs-input-group-btn {
   line-height: 1.6;
   height: 48px\9;
   /* stylelint-enable */
-  height: 46px;
-  padding: 7px 11px;
+  height: 44px;
+  padding: 6px 10px;
   border-radius: 0 6px 6px 0;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -13649,13 +13649,13 @@ textarea.rs-input-group-inside.rs-input-group-md > .rs-input-group-btn {
 }
 .rs-input-group-inside.rs-input-group-sm > .rs-input-group-btn {
   /* stylelint-disable */
-  padding: 4px 11px;
+  padding: 3px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 42px\9;
   /* stylelint-enable */
-  height: 40px;
-  padding: 4px 9px;
+  height: 38px;
+  padding: 3px 8px;
   border-radius: 0 6px 6px 0;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -13672,13 +13672,13 @@ textarea.rs-input-group-inside.rs-input-group-sm > .rs-input-group-btn {
 }
 .rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn {
   /* stylelint-disable */
-  padding: 1px 11px;
+  padding: 0px 10px;
   font-size: 14px;
   line-height: 2.28571429;
   height: 36px\9;
   /* stylelint-enable */
-  height: 34px;
-  padding: 1px 7px;
+  height: 32px;
+  padding: 0px 6px;
   border-radius: 0 6px 6px 0;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -13901,7 +13901,7 @@ textarea.rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn {
 }
 .rs-picker-search-input {
   /* stylelint-disable */
-  padding: 7px 11px;
+  padding: 6px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 48px\9;
@@ -16810,17 +16810,17 @@ textarea.rs-picker-search-input {
   color: #575757;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #e5e5ea;
+  border: 2px solid #e5e5ea;
   transition: border-color ease-in-out 0.3s;
   border-radius: 6px;
   /* stylelint-disable */
-  padding: 7px 11px;
+  padding: 6px 10px;
   font-size: 20px;
   line-height: 1.6;
   height: 48px\9;
   /* stylelint-enable */
   min-width: 200px;
-  padding-right: 42px;
+  padding-right: 40px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
@@ -16860,7 +16860,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 }
 .rs-tree-menu.rs-picker-menu .rs-picker-search-bar::after,
 .rs-check-tree-menu.rs-picker-menu .rs-picker-search-bar::after {
-  top: 7px;
+  top: 6px;
 }
 .rs-picker-menu .ReactVirtualized__Grid.ReactVirtualized__List:focus {
   outline: none;

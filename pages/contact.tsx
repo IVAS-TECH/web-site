@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleMap from 'google-map-react';
 import Head from 'next/head';
-import { Grid, Row, Col, List, Panel } from 'rsuite';
+import { Grid, Row, Col, List, Panel, Button, Drawer, Input } from 'rsuite';
 import Layout from '../components/Layout';
 import { Icon } from '@iconify/react';
 import locationIcon from '@iconify/icons-mdi/map-marker';
@@ -34,13 +34,48 @@ const Map: React.FC<{}> = () => (
     </GoogleMap>
 );
 
+const MessageUs: React.FC<{}> = () => {
+    const [isOpen, setOpen] = React.useState(false);
+
+    return (
+        <>
+            <Button color="green" size="lg" style={{
+                position: 'fixed',
+                bottom: '2rem',
+                right: '2rem'
+            }} onClick={() => setOpen(true)}>
+                Message us
+            </Button>
+            <Drawer
+                size="md"
+                backdrop
+                show={isOpen}
+                onHide={() => setOpen(false)}>
+                <Drawer.Header>
+                    <Drawer.Title>Message Ivas Tech</Drawer.Title>
+                </Drawer.Header>
+                <Drawer.Body>
+                    <Input placeholder="Name" />
+                    <Input placeholder="Email address" style={{ marginTop: '1.3rem', marginBottom: '1.3rem' }} />
+                    <Input componentClass="textarea" rows={12} style={{ maxHeight: 'none' }} placeholder="Message" />
+                </Drawer.Body>
+                <Drawer.Footer>
+                    <Button size="lg" appearance="primary">
+                        Send message
+                    </Button>
+                </Drawer.Footer>
+            </Drawer>
+        </>
+    );
+};
+
 const Contact = () => (
     <>
         <Head>
             <title>Contact us</title>
         </Head>
         <Layout>
-                <Grid fluid style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '5rem', width: '90%' }}>
+                <Grid fluid style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '3rem', width: '90%' }}>
                     <Row gutter={70}>
                         <Col xs={12}>
                             <Panel header="Our contacts">
@@ -107,6 +142,7 @@ const Contact = () => (
                         </Col>
                     </Row>
                 </Grid>
+                <MessageUs />
         </Layout>
     </>
 );
