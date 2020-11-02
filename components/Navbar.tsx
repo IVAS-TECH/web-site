@@ -26,9 +26,9 @@ const Bar: React.FC<{}> = () => {
             <Navbar.Header>
                 <Link href="/">
                     <h3 style={{
-                        paddingTop: 14,
-                        paddingRight: 30,
-                        paddingLeft: 15
+                        paddingTop: '1rem',
+                        paddingRight: '6rem',
+                        paddingLeft: '2rem'
                     }}>
                         Ivas Tech
                     </h3>

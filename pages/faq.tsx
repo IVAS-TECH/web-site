@@ -9,7 +9,7 @@ const FAQ = () => (
             <title>FAQ</title>
         </Head>
         <Layout>
-            <PanelGroup accordion bordered style={{ marginTop: 70, marginLeft: 'auto', marginRight: 'auto', width: '70%' }}>
+            <PanelGroup accordion bordered style={{ marginTop: '4rem', marginLeft: 'auto', marginRight: 'auto', width: '70%' }}>
                 <Panel header="Why would I need a PCB Stencil ?">
                     Stencils replace hand soldering of surface mount devices, and the inconsistencies created by hand soldering. They allow for direct placement of solder paste to the surface to be soldered. 
                 </Panel>

@@ -10,8 +10,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
         <Content>
             {children}
         </Content>
-        <Footer style={{ marginTop: 100 }}>
-            <span style={{ margin: 20 }}>
+        <Footer style={{ marginTop: '5rem' }}>
+            <span style={{ margin: '1rem' }}>
                 Ivas Tech
             </span>
         </Footer>
