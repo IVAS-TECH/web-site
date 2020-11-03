@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Panel, Row, Col, Grid, Divider } from 'rsuite';
+import { Panel, Divider } from 'rsuite';
 import Layout from '../components/Layout';
 import * as text from '../text/about';
 

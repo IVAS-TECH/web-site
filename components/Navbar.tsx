@@ -45,7 +45,7 @@ const Bar: React.FC<{}> = () => {
                     <NavItem href="/blog" title="Blog" />
                 </Nav>
                 <Nav pullRight>
-                    <Nav.Item>BG</Nav.Item>
+                    <NavItem href="/bg" title="BG" />
                     <Nav.Item active>EN</Nav.Item>
                 </Nav>
             </Navbar.Body>
