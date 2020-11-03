@@ -41,8 +41,8 @@ const MessageUs: React.FC<{}> = () => {
         <>
             <Button color="green" size="lg" style={{
                 position: 'fixed',
-                bottom: '2rem',
-                right: '2rem'
+                bottom: '4rem',
+                right: '6rem'
             }} onClick={() => setOpen(true)}>
                 Message us
             </Button>
@@ -77,6 +77,13 @@ const Contact = () => (
         <Layout>
                 <Grid fluid style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '3rem', width: '90%' }}>
                     <Row gutter={70}>
+                        <Col xs={12}>
+                            <Panel header="Ivas Tech on the map">
+                                <div style={{ width: '100%', height: '30rem'}}>
+                                    <Map />
+                                </div>
+                            </Panel>
+                        </Col>
                         <Col xs={12}>
                             <Panel header="Our contacts">
                                 <List size="lg">
@@ -131,13 +138,6 @@ const Contact = () => (
                                         </Row>
                                     </List.Item>
                                 </List>
-                            </Panel>
-                        </Col>
-                        <Col xs={12}>
-                            <Panel header="Ivas Tech on the map">
-                                <div style={{ width: '100%', height: '30rem'}}>
-                                    <Map />
-                                </div>
                             </Panel>
                         </Col>
                     </Row>
