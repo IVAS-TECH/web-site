@@ -42,13 +42,13 @@ const Bar: React.FC<{}> = () => {
         <Navbar appearance="inverse">
             <Navbar.Header>
                 <Link href="/">
-                    <h1 style={{
-                        paddingTop: '0.7rem',
+                    <b style={{
+                        fontSize: '3rem',
                         paddingRight: '6rem',
                         paddingLeft: '2rem'
                     }}>
                         Ivas Tech
-                    </h1>
+                    </b>
                 </Link>
             </Navbar.Header>
             <Navbar.Body>
@@ -86,7 +86,7 @@ const Bar: React.FC<{}> = () => {
                     <NavItem href="/" title={
                         <>
                             <ReactCountryFlag
-                                countryCode="EU"
+                                countryCode="GB"
                                 svg
                                 style={{
                                     width: '1.5em',
