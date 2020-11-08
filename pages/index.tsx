@@ -10,7 +10,7 @@ const Home = () => (
             <title>Ivas Tech</title>
         </Head>
         <Layout>
-            <div style={{
+            <main style={{
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 width: '60%'
@@ -26,7 +26,7 @@ const Home = () => (
                     <b>Ivas Tech</b> manifactures SMT stencils and produces thin and precise metal elements such as buisness cards.
                 </p>
                 <Divider />
-            </div>
+            </main>
         </Layout>
     </>
 );
