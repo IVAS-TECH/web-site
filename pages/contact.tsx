@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleMap from 'google-map-react';
 import Head from 'next/head';
-import { Grid, Row, Col, List, Panel, Button, Drawer, Input } from 'rsuite';
+import { FlexboxGrid, Row, Col, List, Panel, Button, Drawer, Input } from 'rsuite';
 import Layout from '../components/Layout';
 import { Icon } from '@iconify/react';
 import locationIcon from '@iconify/icons-mdi/map-marker';
@@ -27,10 +27,10 @@ const LocationPin
 
 const Map: React.FC<{}> = () => (
     <GoogleMap
-        bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GMAP_API_KEY as string}}
+        bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GMAP_API_KEY as string }}
         defaultCenter={location}
         defaultZoom={17}>
-        <LocationPin text="Ivas Tech" lat={location. lat} lng={location.lng} />
+        <LocationPin text="Ivas Tech" lat={location.lat} lng={location.lng} />
     </GoogleMap>
 );
 
@@ -41,8 +41,8 @@ const MessageUs: React.FC<{}> = () => {
         <>
             <Button color="green" size="lg" style={{
                 position: 'fixed',
-                bottom: '4rem',
-                right: '6rem'
+                bottom: '2rem',
+                right: '3rem'
             }} onClick={() => setOpen(true)}>
                 Message us
             </Button>
@@ -75,74 +75,72 @@ const Contact = () => (
             <title>Contact us</title>
         </Head>
         <Layout>
-                <Grid fluid style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '3rem', width: '90%' }}>
-                    <Row gutter={70}>
-                        <Col xs={12}>
-                            <Panel header="Ivas Tech on the map">
-                                <div style={{ width: '100%', height: '30rem'}}>
-                                    <Map />
-                                </div>
-                            </Panel>
-                        </Col>
-                        <Col xs={12}>
-                            <Panel header="Our contacts">
-                                <List size="lg">
-                                    <List.Item>
-                                        <Row>
-                                            <Col xs={6}>
-                                                Address:
-                                            </Col>
-                                            <Col xs={16} xsOffset={2} >
-                                                10 bul. Asen Yordanov, Sofia, Bulgaria
-                                            </Col>
-                                        </Row>
-                                    </List.Item>
-                                    <List.Item>
-                                        <Row>
-                                            <Col xs={6}>
-                                                Email:
-                                            </Col>
-                                            <Col xs={16} xsOffset={2}>
-                                                smtstencil@ivastech.com
-                                            </Col>
-                                        </Row>
-                                    </List.Item>
-                                    <List.Item>
-                                        <Row>
-                                            <Col xs={6}>
-                                                Telephone:
-                                            </Col>
-                                            <Col xs={16} xsOffset={2}>
-                                                +359 2 962 93 85
-                                            </Col>
-                                        </Row>
-                                    </List.Item>
-                                    <List.Item>
-                                        <Row>
-                                            <Col xs={6}>
-                                                Mobile:
-                                            </Col>
-                                            <Col xs={16} xsOffset={2}>
-                                                +359 8 99 88 12 57
-                                            </Col>
-                                        </Row>
-                                    </List.Item>
-                                    <List.Item>
-                                        <Row>
-                                            <Col xs={6}>
-                                                Post code:
-                                            </Col>
-                                            <Col xs={16} xsOffset={2}>
-                                                1592
-                                            </Col>
-                                        </Row>
-                                    </List.Item>
-                                </List>
-                            </Panel>
-                        </Col>
-                    </Row>
-                </Grid>
-                <MessageUs />
+            <FlexboxGrid align="middle" justify="space-around" style={{ marginTop: '3rem' }}>
+                <FlexboxGrid.Item>
+                    <Panel header="Ivas Tech on the map">
+                        <div style={{ width: '40rem', height: '30rem' }}>
+                            <Map />
+                        </div>
+                    </Panel>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Panel header="Our contacts" style={{ minWidth: '36rem' }}>
+                        <List size="lg">
+                            <List.Item>
+                                <Row>
+                                    <Col xs={6}>
+                                        Address:
+                                    </Col>
+                                    <Col xs={16} xsOffset={2} >
+                                        10 bul. Asen Yordanov, Sofia, Bulgaria
+                                    </Col>
+                                </Row>
+                            </List.Item>
+                            <List.Item>
+                                <Row>
+                                    <Col xs={6}>
+                                        Email:
+                                    </Col>
+                                    <Col xs={16} xsOffset={2}>
+                                        contact@ivastech.com
+                                    </Col>
+                                </Row>
+                            </List.Item>
+                            <List.Item>
+                                <Row>
+                                    <Col xs={6}>
+                                        Telephone:
+                                    </Col>
+                                    <Col xs={16} xsOffset={2}>
+                                        +359 2 962 93 85
+                                    </Col>
+                                </Row>
+                            </List.Item>
+                            <List.Item>
+                                <Row>
+                                    <Col xs={6}>
+                                        Mobile:
+                                    </Col>
+                                    <Col xs={16} xsOffset={2}>
+                                        +359 8 99 88 12 57
+                                    </Col>
+                                </Row>
+                            </List.Item>
+                            <List.Item>
+                                <Row>
+                                    <Col xs={6}>
+                                        Post code:
+                                    </Col>
+                                    <Col xs={16} xsOffset={2}>
+                                        1592
+                                    </Col>
+                                </Row>
+                            </List.Item>
+                        </List>
+                    </Panel>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+            <MessageUs />
         </Layout>
     </>
 );
