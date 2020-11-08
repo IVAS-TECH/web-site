@@ -87,7 +87,7 @@ const Bar: React.FC<{}> = () => {
                 </Nav>
                 <Nav pullRight>
                     <NavItem href="/bg" title={<Lang code="BG" title="BG" />} />
-                    <NavItem href="/bg" title={<Lang code="GB" title="EN" />} />
+                    <NavItem href="/" title={<Lang code="GB" title="EN" />} />
                 </Nav>
             </Navbar.Body>
         </Navbar>
