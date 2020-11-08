@@ -15,7 +15,7 @@ const NavItem: React.FC<{
             componentClass={NavLink}
             href={href}
             active={!!ruter.pathname.match(href)}
-            >
+        >
             {title}
         </Nav.Item>
     );
@@ -30,12 +30,28 @@ const DropdownItem: React.FC<{
         <Dropdown.Item
             componentClass={NavLink}
             href={href}
-            >
+        >
             {title}
         </Dropdown.Item>
     );
 };
 
+const Lang: React.FC<{
+    code: string,
+    title: string
+}> = ({ code, title }) => (
+    <>
+        <ReactCountryFlag
+            countryCode={code}
+            svg
+            style={{
+                width: '1.5em',
+                height: '1.5em',
+            }}
+        />
+        <span style={{ marginLeft: '0.5rem' }}>{title}</span>
+    </>
+);
 
 const Bar: React.FC<{}> = () => {
     return (
@@ -44,7 +60,7 @@ const Bar: React.FC<{}> = () => {
                 <Link href="/">
                     <b style={{
                         fontSize: '3rem',
-                        paddingRight: '6rem',
+                        paddingRight: '2rem',
                         paddingLeft: '2rem'
                     }}>
                         Ivas Tech
@@ -53,11 +69,11 @@ const Bar: React.FC<{}> = () => {
             </Navbar.Header>
             <Navbar.Body>
                 <Nav>
-                    <Dropdown title="About">
-                        <DropdownItem href="/about/smt-stencils" title="SMT Stencils" />
-                        <DropdownItem href="/about/fiducial-marks" title="Fiducial marks" />
-                        <DropdownItem href="/about/nano-coating" title="Nano coating" />
-                        <DropdownItem href="/about/electrochemical-polishing" title="Electrochemical polishing" />
+                    <Dropdown title="SMT-Stencils">
+                        <DropdownItem href="/smt-stencils/introduction" title="Introduction" />
+                        <DropdownItem href="/smt-stencils/fiducial-marks" title="Fiducial marks" />
+                        <DropdownItem href="/smt-stencils/nano-coating" title="Nano coating" />
+                        <DropdownItem href="/smt-stencils/electrochemical-polishing" title="Electrochemical polishing" />
                     </Dropdown>
                     <Dropdown title="We offer">
                         <DropdownItem href="/we-offer/smt-stencils" title="SMT Stencils" />
@@ -70,32 +86,8 @@ const Bar: React.FC<{}> = () => {
                     <NavItem href="/blog" title="Blog" />
                 </Nav>
                 <Nav pullRight>
-                    <NavItem href="/bg" title={
-                        <>
-                            <ReactCountryFlag
-                                countryCode="BG"
-                                svg
-                                style={{
-                                    width: '1.5em',
-                                    height: '1.5em',
-                                }}
-                            />
-                            <span style={{ marginLeft: '0.5rem' }}>BG</span>
-                        </>
-                    }/>
-                    <NavItem href="/" title={
-                        <>
-                            <ReactCountryFlag
-                                countryCode="GB"
-                                svg
-                                style={{
-                                    width: '1.5em',
-                                    height: '1.5em',
-                                }}
-                            />
-                            <span style={{ marginLeft: '0.5rem' }}>EN</span>
-                        </>
-                    }/>
+                    <NavItem href="/bg" title={<Lang code="BG" title="BG" />} />
+                    <NavItem href="/bg" title={<Lang code="GB" title="EN" />} />
                 </Nav>
             </Navbar.Body>
         </Navbar>
