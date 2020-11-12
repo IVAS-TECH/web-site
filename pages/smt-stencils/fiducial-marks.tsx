@@ -13,7 +13,8 @@ const Fiducials = () => (
             <main style={{
                 width: '60%',
                 marginLeft: 'auto',
-                marginRight: 'auto'
+                marginRight: 'auto',
+                textAlign: 'justify'
             }} >
                 <Divider style={{ marginTop: '4rem' }} />
                 <Panel header={text.header[0]} >

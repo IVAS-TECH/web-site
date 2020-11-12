@@ -55,9 +55,10 @@ const MessageUs: React.FC<{}> = () => {
                     <Drawer.Title>Message Ivas Tech</Drawer.Title>
                 </Drawer.Header>
                 <Drawer.Body>
-                    <Input placeholder="Name" />
-                    <Input placeholder="Email address" style={{ marginTop: '1.3rem', marginBottom: '1.3rem' }} />
-                    <Input componentClass="textarea" rows={12} style={{ maxHeight: 'none' }} placeholder="Message" />
+                    <Input placeholder="Company name" />
+                    <Input placeholder="Your name" style={{ marginTop: '1.3rem' }} />
+                    <Input placeholder="Email address" style={{ marginTop: '1.3rem' }} />
+                    <Input componentClass="textarea" rows={12} style={{ maxHeight: 'none', marginTop: '1.3rem' }} placeholder="Message" />
                 </Drawer.Body>
                 <Drawer.Footer>
                     <Button size="lg" appearance="primary">
@@ -102,7 +103,7 @@ const Contact = () => (
                                         Email:
                                     </Col>
                                     <Col xs={16} xsOffset={2}>
-                                        contact@ivastech.com
+                                        Message us
                                     </Col>
                                 </Row>
                             </List.Item>
