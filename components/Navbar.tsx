@@ -1,9 +1,10 @@
-import React from 'react';
-import { Nav, Navbar, Dropdown, Divider } from 'rsuite';
+import React, { useEffect, useState } from 'react';
+import { Nav, Navbar, Dropdown, Icon, IconButton } from 'rsuite';
 import NavLink from './Link';
 import Link from './Link';
 import { useRouter } from 'next/router';
 import ReactCountryFlag from 'react-country-flag';
+import { useWindowWidth } from '@react-hook/window-size';
 
 const NavItem: React.FC<{
     href: string,
@@ -53,38 +54,71 @@ const Lang: React.FC<{
     </>
 );
 
+const NavBar = () => (
+    <Nav>
+        <Dropdown title="SMT-Stencils">
+            <DropdownItem href="/smt-stencils/introduction" title="Introduction" />
+            <DropdownItem href="/smt-stencils/fiducial-marks" title="Fiducial marks" />
+            <DropdownItem href="/smt-stencils/nano-coating" title="Nano coating" />
+            <DropdownItem href="/smt-stencils/electrochemical-polishing" title="Electrochemical polishing" />
+        </Dropdown>
+        <Dropdown title="We offer">
+            <DropdownItem href="/we-offer/smt-stencils" title="SMT Stencils" />
+            <DropdownItem href="/we-offer/thin-precise-metal-elements" title="Thin precise metal elements" />
+        </Dropdown>
+        <NavItem href="/equipment" title="Equipment" />
+        <NavItem href="/contact" title="Contact us" />
+        <Nav.Item componentClass={'a'} href="https://example.com">Order</Nav.Item>
+        <NavItem href="/faq" title="FAQ" />
+        <NavItem href="/blog" title="Blog" />
+    </Nav>
+);
+
+const Menu = () => (
+    <Dropdown
+        renderTitle={() => (
+            <Icon icon="bars" size="3x" style={{ marginTop: '0.25rem' }} />
+        )}>
+        <Dropdown.Menu title="SMT-Stencils">
+            <DropdownItem href="/smt-stencils/introduction" title="Introduction" />
+            <DropdownItem href="/smt-stencils/fiducial-marks" title="Fiducial marks" />
+            <DropdownItem href="/smt-stencils/nano-coating" title="Nano coating" />
+            <DropdownItem href="/smt-stencils/electrochemical-polishing" title="Electrochemical polishing" />
+        </Dropdown.Menu>
+        <Dropdown.Menu title="We offer">
+            <DropdownItem href="/we-offer/smt-stencils" title="SMT Stencils" />
+            <DropdownItem href="/we-offer/thin-precise-metal-elements" title="Thin precise metal elements" />
+        </Dropdown.Menu>
+        <DropdownItem href="/equipment" title="Equipment" />
+        <DropdownItem href="/contact" title="Contact us" />
+        <Dropdown.Item componentClass={'a'} href="https://example.com">Order</Dropdown.Item>
+        <DropdownItem href="/faq" title="FAQ" />
+        <DropdownItem href="/blog" title="Blog" />
+    </Dropdown>
+);
+
+const Navigation: React.FC<{}> = () => {
+    const width = useWindowWidth({
+        leading: true
+    });
+    const isLargeEnough = width >= 1100;
+    return isLargeEnough ? <NavBar/> : <Menu />;
+}
+
 const Bar: React.FC<{}> = () => {
+    const [isBrowser, setBrowser] = useState(false);
+    useEffect(() => setBrowser(true), []);
     return (
         <Navbar appearance="inverse">
-            <Navbar.Header>
+            <Navbar.Header style={{ marginLeft: '2%', marginRight: '2%' }}>
                 <Link href="/">
-                    <b style={{
-                        fontSize: '3rem',
-                        paddingRight: '2rem',
-                        paddingLeft: '2rem'
-                    }}>
+                    <b style={{ fontSize: '3rem' }}>
                         Ivas Tech
                     </b>
                 </Link>
             </Navbar.Header>
             <Navbar.Body>
-                <Nav>
-                    <Dropdown title="SMT-Stencils">
-                        <DropdownItem href="/smt-stencils/introduction" title="Introduction" />
-                        <DropdownItem href="/smt-stencils/fiducial-marks" title="Fiducial marks" />
-                        <DropdownItem href="/smt-stencils/nano-coating" title="Nano coating" />
-                        <DropdownItem href="/smt-stencils/electrochemical-polishing" title="Electrochemical polishing" />
-                    </Dropdown>
-                    <Dropdown title="We offer">
-                        <DropdownItem href="/we-offer/smt-stencils" title="SMT Stencils" />
-                        <DropdownItem href="/we-offer/thin-precise-metal-elements" title="Thin precise metal elements" />
-                    </Dropdown>
-                    <NavItem href="/equipment" title="Equipment" />
-                    <NavItem href="/contact" title="Contact us" />
-                    <Nav.Item componentClass={'a'} href="https://example.com">Order</Nav.Item>
-                    <NavItem href="/faq" title="FAQ" />
-                    <NavItem href="/blog" title="Blog" />
-                </Nav>
+                {isBrowser ? <Navigation /> : <NavBar />}
                 <Nav pullRight>
                     <NavItem href="/bg" title={<Lang code="BG" title="BG" />} />
                     <NavItem href="/" title={<Lang code="GB" title="EN" />} />
