@@ -77,7 +77,9 @@ const NavBar = () => (
 const Menu = () => (
     <Dropdown
         renderTitle={() => (
-            <Icon icon="bars" size="3x" style={{ marginTop: '0.25rem' }} />
+            <IconButton appearance="subtle" size="lg" style={{ width: '3.2rem', height: '3.2rem', marginTop: '0.3rem' }} icon={(
+                <Icon icon="bars" style={{ width: '3.1rem', height: '3.1rem', fontSize: '2.4rem', paddingTop: '0.01rem' }} />
+            )} />
         )}>
         <Dropdown.Menu title="SMT-Stencils">
             <DropdownItem href="/smt-stencils/introduction" title="Introduction" />
@@ -110,7 +112,7 @@ const Bar: React.FC<{}> = () => {
     useEffect(() => setBrowser(true), []);
     return (
         <Navbar appearance="inverse">
-            <Navbar.Header style={{ marginLeft: '2%', marginRight: '2%' }}>
+            <Navbar.Header style={{ marginLeft: '2%', marginRight: '3%' }}>
                 <Link href="/">
                     <b style={{ fontSize: '3rem' }}>
                         Ivas Tech
