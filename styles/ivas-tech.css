@@ -1,0 +1,88 @@
+.ivas-gap-from-navbar {
+    margin-top: 5rem;
+}
+
+.ivas-standart-layout {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+@media screen and (max-width : 600px) {
+    .ivas-standart-layout {
+        width: 96%;
+    }
+}
+
+@media screen and (min-width : 800px) {
+    .ivas-standart-layout {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width : 900px) {
+    .ivas-standart-layout {
+        width: 85%;
+    }
+}
+
+@media screen and (min-width : 1000px) {
+    .ivas-standart-layout {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width : 1100px) {
+    .ivas-standart-layout {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    .ivas-standart-layout {
+        width: 60%;
+    }
+}
+
+.ivas-map {
+    width: 40rem;
+    height: 30rem;
+}
+
+.ivas-contacts {
+    min-width: 32rem;
+}
+
+@media screen and (max-width : 1000px) {
+    .ivas-map {
+        width: 90vw;
+        height: 95vh;
+    }
+
+    .ivas-contacts {
+        min-width: 90vw
+    }
+}
+
+@media screen and (min-width : 1000px) {
+    .ivas-map {
+        width: 45vw;
+        height: 70vh;
+    }
+
+    .ivas-contacts {
+        min-width: 25rem;
+    }    
+}
+
+@media screen and (min-width : 1400px) {
+    .ivas-map {
+        width: 44vw;
+        height: 70vh;
+    }
+
+    .ivas-contacts {
+        min-width: 36vw;
+    }    
+}

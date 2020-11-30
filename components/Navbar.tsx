@@ -4,7 +4,7 @@ import NavLink from './Link';
 import Link from './Link';
 import { useRouter } from 'next/router';
 import ReactCountryFlag from 'react-country-flag';
-import { useWindowWidth } from '@react-hook/window-size';
+import { useWindowWidth } from '@react-hook/window-size/throttled';
 
 const NavItem: React.FC<{
     href: string,
@@ -101,9 +101,11 @@ const Menu = () => (
 
 const Navigation: React.FC<{}> = () => {
     const width = useWindowWidth({
+        fps: 40,
         leading: true
     });
-    const isLargeEnough = width >= 1100;
+    console.log(width);
+    const isLargeEnough = width >= 1150;
     return isLargeEnough ? <NavBar/> : <Menu />;
 }
 

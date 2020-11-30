@@ -10,13 +10,8 @@ const Intro = () => (
             <title>SMT-Stencils</title>
         </Head>
         <Layout>
-            <main style={{
-                width: '60%',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                textAlign: 'justify'
-            }} >
-                <Divider style={{ marginTop: '4rem' }} />
+            <main className="ivas-standart-layout">
+                <Divider className="ivas-gap-from-navbar" />
                 <Panel header={text.header[0]}>
                     <img width="800" height="300" src="https://www.pcbelec.com/wp-content/uploads/2020/07/Unframe-SMT-Stencil.png" />
                     <p style={{ marginTop: '2rem' }}>

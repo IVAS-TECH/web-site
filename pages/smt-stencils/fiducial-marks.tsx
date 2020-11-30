@@ -10,13 +10,8 @@ const Fiducials = () => (
             <title>Fiducial marks</title>
         </Head>
         <Layout>
-            <main style={{
-                width: '60%',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                textAlign: 'justify'
-            }} >
-                <Divider style={{ marginTop: '4rem' }} />
+            <main className="ivas-standart-layout">
+                <Divider className="ivas-gap-from-navbar" />
                 <Panel header={text.header[0]} >
                     <p>
                         {text.fiducialsAndPickAndPlace[0]}

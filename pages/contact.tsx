@@ -36,14 +36,9 @@ const Map: React.FC<{}> = () => (
 
 const MessageUs: React.FC<{}> = () => {
     const [isOpen, setOpen] = React.useState(false);
-
     return (
         <>
-            <Button color="green" size="lg" style={{
-                position: 'fixed',
-                bottom: '2rem',
-                right: '3rem'
-            }} onClick={() => setOpen(true)}>
+            <Button color="green" size="lg" onClick={() => setOpen(true)}>
                 Message us
             </Button>
             <Drawer
@@ -58,7 +53,7 @@ const MessageUs: React.FC<{}> = () => {
                     <Input placeholder="Company name" />
                     <Input placeholder="Your name" style={{ marginTop: '1.3rem' }} />
                     <Input placeholder="Email address" style={{ marginTop: '1.3rem' }} />
-                    <Input componentClass="textarea" rows={12} style={{ maxHeight: 'none', marginTop: '1.3rem' }} placeholder="Message" />
+                    <Input componentClass="textarea" rows={12} style={{ maxHeight: 'none', marginTop: '1.3rem', resize: 'vertical' }} placeholder="Message" />
                 </Drawer.Body>
                 <Drawer.Footer>
                     <Button size="lg" appearance="primary">
@@ -76,16 +71,16 @@ const Contact = () => (
             <title>Contact us</title>
         </Head>
         <Layout>
-            <FlexboxGrid align="middle" justify="space-around" style={{ marginTop: '3rem' }}>
+            <FlexboxGrid align="middle" justify="space-around" style={{ marginTop: '3rem', width: '90%', marginLeft: 'auto', marginRight: 'auto' }}>
                 <FlexboxGrid.Item>
                     <Panel header="Ivas Tech on the map">
-                        <div style={{ width: '40rem', height: '30rem' }}>
+                        <div className="ivas-map">
                             <Map />
                         </div>
                     </Panel>
                 </FlexboxGrid.Item>
                 <FlexboxGrid.Item>
-                    <Panel header="Our contacts" style={{ minWidth: '36rem' }}>
+                    <Panel header="Our contacts" className="ivas-contacts">
                         <List size="lg">
                             <List.Item>
                                 <Row>
@@ -103,7 +98,7 @@ const Contact = () => (
                                         Email:
                                     </Col>
                                     <Col xs={16} xsOffset={2}>
-                                        Message us
+                                        <MessageUs />
                                     </Col>
                                 </Row>
                             </List.Item>
@@ -113,7 +108,7 @@ const Contact = () => (
                                         Telephone:
                                     </Col>
                                     <Col xs={16} xsOffset={2}>
-                                        +359 2 962 93 85
+                                        +359 296 293 85
                                     </Col>
                                 </Row>
                             </List.Item>
@@ -123,7 +118,7 @@ const Contact = () => (
                                         Mobile:
                                     </Col>
                                     <Col xs={16} xsOffset={2}>
-                                        +359 8 99 88 12 57
+                                        +359 899 88 1257
                                     </Col>
                                 </Row>
                             </List.Item>
@@ -141,7 +136,6 @@ const Contact = () => (
                     </Panel>
                 </FlexboxGrid.Item>
             </FlexboxGrid>
-            <MessageUs />
         </Layout>
     </>
 );
